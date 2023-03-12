@@ -22,9 +22,10 @@ const Computers = () => {
       />
       <primitive 
         object={computer.scene} 
-        scale={0.7} 
-        position={[0.25, -2.5, -1.2]} 
-        rotation={[0, 0.2, -0.1]}
+        scale={0.6} 
+        // position={[0.25, -2.5, -1.2]} 
+        position={[0, 0, -1.1]} 
+        rotation={[0, -0.2, -0.2]}
       />
     </mesh>
   )
@@ -33,7 +34,7 @@ const Computers = () => {
 const ComputersCanvas= ()=>{
   return (
   <Canvas  
-    className="hidden sm:block cursor-grab"
+    className="cursor-grab"
     frameloop="demand" 
     shadows 
     camera={{position: [20,3,5], fov:25}} 

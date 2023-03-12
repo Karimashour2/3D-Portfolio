@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../style";
-import { EarthCanvas } from "./canvas";
+import { ComputersCanvas, EarthCanvas } from "./canvas";
 import { ComponentsWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import Tilt from "react-tilt";
@@ -18,11 +18,14 @@ const Contact = () => {
         <p className={`${styles.sectionSubText}`}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
       </motion.div>
-      <div className="flex flex-col items-center md:flex-row-reverse md:justify-between md:items-start md:flex-nowrap w-full">
+      <div 
+        className="flex flex-col items-center md:flex-row-reverse md:justify-between md:items-start md:flex-nowrap w-full"
+      >
         <div
           className="flex justify-center w-[100%] md:w-[50%] sm:h-[400px] lg:h-[550px] h-[350px]"
         >
-          <EarthCanvas />
+          {/* <EarthCanvas /> */}
+          <ComputersCanvas/>
         </div>
         <div className="flex flex-col gap-5 w-[100%] md:w-[50%]">
           {contacts.map((con, i) => (

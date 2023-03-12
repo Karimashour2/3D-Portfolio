@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../style";
-import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas, EarthCanvas } from "./canvas";
 import ComputersCanvasXS from "./canvas/ComputersXS";
 
 const Hero = () => {
@@ -23,20 +23,25 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
-      <ComputersCanvasXS/>
-      <div className={`${styles.paddingX} absolute xs:bottom-5 bottom-5 w-full flex  items-center justify-center sm:justify-start`}>
-        <a href='#about'>
+      <div className="w-[70%] h-[30%] md:w-[60%] md:h-[60%] absolute left-[15%] top-[40%] md:left-[20%] md:top-[32%] z-20">
+        <EarthCanvas />
+      </div>
+      {/* <ComputersCanvas />
+      <ComputersCanvasXS/> */}
+      <div
+        className={`${styles.paddingX} absolute z-10 xs:bottom-5 bottom-20 w-full flex  items-center justify-center sm:justify-start`}
+      >
+        <a href="#about">
           <div className="w-[30px] h-[55px] border-[3px] border-secondary rounded-3xl">
             <motion.div
               className="w-3 h-3 rounded-full bg-secondary mx-auto p-2 mt-1"
               animate={{
-                y: [0,26,0]
+                y: [0, 26, 0],
               }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: 'loop'
+                repeatType: "loop",
               }}
             />
           </div>
